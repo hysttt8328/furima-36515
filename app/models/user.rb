@@ -20,6 +20,9 @@ class User < ApplicationRecord
   validates :password, format: { with: VALID_PASSWORD_REGEX }
   validates :birthday, presence: true
 
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :prefecture
+
   #has_many :items
   #has_many :orders
 end
