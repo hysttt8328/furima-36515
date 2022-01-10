@@ -23,6 +23,7 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
   belongs_to :category
+  belongs_to :status
 
   #has_many :items
   #has_many :orders
