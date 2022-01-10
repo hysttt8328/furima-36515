@@ -24,6 +24,7 @@ class User < ApplicationRecord
   belongs_to :prefecture
   belongs_to :category
   belongs_to :status
+  belongs_to :scheduled
 
   #has_many :items
   #has_many :orders
