@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :delivery_address do
     prefecture_id { 1 }
-    city { "MyString" }
+    city { 'MyString' }
   end
 end

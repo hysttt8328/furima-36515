@@ -6,9 +6,9 @@ class Status < ActiveHash::Base
     { id: 4, status_id: '目立った傷や汚れなし' },
     { id: 5, status_id: 'やや傷や汚れあり' },
     { id: 6, status_id: '傷や汚れあり' },
-    { id: 7, status_id: '全体的に状態が悪い' },
+    { id: 7, status_id: '全体的に状態が悪い' }
 
   ]
-   include ActiveHash::Associations
-   has_many :items
-  end
+  include ActiveHash::Associations
+  has_many :items
+end
