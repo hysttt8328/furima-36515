@@ -26,6 +26,6 @@ class User < ApplicationRecord
   belongs_to :status
   belongs_to :scheduled
 
-  # has_many :items
+  has_many :items
   # has_many :orders
 end
