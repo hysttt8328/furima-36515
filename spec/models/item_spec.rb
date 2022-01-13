@@ -13,7 +13,7 @@ RSpec.describe Item, type: :model do
     end
 
     context '商品情報の入力がうまく行かない時' do
-      it 'ユーザー情報がない場合は登録できない' do
+      it 'ユーザー情報がない場合は出品できない' do
         @item.user = nil
         @item.valid?
         expect(@item.errors.full_messages).to include('User must exist')
