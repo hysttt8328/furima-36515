@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
-    #@items = Item.all
+    @items = Item.all
   end
 
   def new
@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path
     else
-      render :new
+      render :index
     end
   end
 
