@@ -7,11 +7,11 @@ class OrderDeliveryAddress
     validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
     validates :city, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: "is invalid. Input full-width characters"}
     validates :house_number
-    validates :telephone_number, format: {with: /\A\d{10}\z|\A\d{11}\z/ , message: "is invalid. Input only number"}
+    validates :telephone_number, format: {with: /\A\d{10}\z|\A\d{11}\z/ , message: "is invalid"}
     validates :token
+    validates :user_id
+    validates :item_id
   end
-
-    
 
     def save
       order = Order.create(user_id: user_id, item_id: item_id )
