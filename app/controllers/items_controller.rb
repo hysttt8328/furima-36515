@@ -4,7 +4,6 @@ class ItemsController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :prevent_url, only: :edit
 
-
   def index
     @items = Item.order('created_at DESC')
   end
@@ -26,9 +25,6 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if @item.user_id != current_user.id
-      redirect_to root_path
-    end
   end
 
   def update
@@ -58,7 +54,7 @@ class ItemsController < ApplicationController
   end
 
   def prevent_url
-    if @item.user_id == current_user.id || @item.order == nil
+    if @item.user_id != current_user.id || @item.order != nil
       redirect_to root_path
     end
   end
