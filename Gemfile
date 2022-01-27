@@ -66,3 +66,4 @@ gem 'active_hash'
 gem 'ancestry'
 gem 'pry-rails'
 gem 'payjp'
+gem "aws-sdk-s3", require: false
